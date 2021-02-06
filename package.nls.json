@@ -1,0 +1,23 @@
+{
+	"keyAction01.title": "KeyAction01",
+	"keyAction02.title": "KeyAction02",
+	"keyAction03.title": "KeyAction03",
+	"keyAction04.title": "KeyAction04",
+	"keyAction05.title": "KeyAction05",
+	"keyAction06.title": "KeyAction06",
+	"keyAction07.title": "KeyAction07",
+	"keyAction08.title": "KeyAction08",
+	"keyAction09.title": "KeyAction09",
+	"keyAction10.title": "KeyAction10",
+
+	"conf.keyAction01.desc": "Description: KeyAction01",
+	"conf.keyAction02.desc": "Description: KeyAction02",
+	"conf.keyAction03.desc": "Description: KeyAction03",
+	"conf.keyAction04.desc": "Description: KeyAction04",
+	"conf.keyAction05.desc": "Description: KeyAction05",
+	"conf.keyAction06.desc": "Description: KeyAction06",
+	"conf.keyAction07.desc": "Description: KeyAction07",
+	"conf.keyAction08.desc": "Description: KeyAction08",
+	"conf.keyAction09.desc": "Description: KeyAction09",
+	"conf.keyAction10.desc": "Description: KeyAction10"
+}

@@ -1,0 +1,23 @@
+{
+	"keyAction01.title": "キーアクション01",
+	"keyAction02.title": "キーアクション02",
+	"keyAction03.title": "キーアクション03",
+	"keyAction04.title": "キーアクション04",
+	"keyAction05.title": "キーアクション05",
+	"keyAction06.title": "キーアクション06",
+	"keyAction07.title": "キーアクション07",
+	"keyAction08.title": "キーアクション08",
+	"keyAction09.title": "キーアクション09",
+	"keyAction10.title": "キーアクション10",
+
+	"conf.keyAction01.desc": "説明: KeyAction01",
+	"conf.keyAction02.desc": "説明: KeyAction02",
+	"conf.keyAction03.desc": "説明: KeyAction03",
+	"conf.keyAction04.desc": "説明: KeyAction04",
+	"conf.keyAction05.desc": "説明: KeyAction05",
+	"conf.keyAction06.desc": "説明: KeyAction06",
+	"conf.keyAction07.desc": "説明: KeyAction07",
+	"conf.keyAction08.desc": "説明: KeyAction08",
+	"conf.keyAction09.desc": "説明: KeyAction09",
+	"conf.keyAction10.desc": "説明: KeyAction10"
+}
