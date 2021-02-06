@@ -2,13 +2,33 @@
 	"name": "insertcustomtext",
 	"displayName": "Insert Custom Text Quickly",
 	"description": "Quickly insert custom text",
+	"icon": "./resources/icon/extension_main.png",
 	"version": "0.0.1",
+	"publisher": "TatsuyaNakamori",
 	"engines": {
 		"vscode": "^1.53.0"
 	},
 	"categories": [
+		"Keymaps",
 		"Other"
 	],
+	"license": "SEE LICENSE IN LICENSE FILE",
+	"preview": true,
+	"keywords": [
+		"shortcuts",
+		"string",
+		"text",
+		"insert",
+		"snippets"
+	],
+	"homepage": "https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly.git"
+	},
+	"bugs": {
+		"url": "https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/issues"
+	},
 	"activationEvents": [
 		"onCommand:insertcustomtext.helloWorld"
 	],
