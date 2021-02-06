@@ -30,15 +30,189 @@
 		"url": "https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/issues"
 	},
 	"activationEvents": [
-		"onCommand:insertcustomtext.helloWorld"
+		"onCommand:insertcustomtext.keyAction01",
+		"onCommand:insertcustomtext.keyAction02",
+		"onCommand:insertcustomtext.keyAction03",
+		"onCommand:insertcustomtext.keyAction04",
+		"onCommand:insertcustomtext.keyAction05",
+		"onCommand:insertcustomtext.keyAction06",
+		"onCommand:insertcustomtext.keyAction07",
+		"onCommand:insertcustomtext.keyAction08",
+		"onCommand:insertcustomtext.keyAction09",
+		"onCommand:insertcustomtext.keyAction10"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "insertcustomtext.helloWorld",
-				"title": "Hello World"
+				"category": "InsertCustomTextQuickly01",
+				"command": "insertcustomtext.keyAction01",
+				"title": "%keyAction01.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly02",
+				"command": "insertcustomtext.keyAction02",
+				"title": "%keyAction02.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly03",
+				"command": "insertcustomtext.keyAction03",
+				"title": "%keyAction03.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly04",
+				"command": "insertcustomtext.keyAction04",
+				"title": "%keyAction04.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly05",
+				"command": "insertcustomtext.keyAction05",
+				"title": "%keyAction05.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly06",
+				"command": "insertcustomtext.keyAction06",
+				"title": "%keyAction06.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly07",
+				"command": "insertcustomtext.keyAction07",
+				"title": "%keyAction07.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly08",
+				"command": "insertcustomtext.keyAction08",
+				"title": "%keyAction08.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly09",
+				"command": "insertcustomtext.keyAction09",
+				"title": "%keyAction09.title%",
+				"when": "editorTextFocus"
+			},
+			{
+				"category": "InsertCustomTextQuickly10",
+				"command": "insertcustomtext.keyAction10",
+				"title": "%keyAction10.title%",
+				"when": "editorTextFocus"
 			}
+		],
+		"configuration": [
+			{
+				"title": "Insert Custom Text",
+				"properties": {
+					"keyAction.01": {
+						"type": "string",
+						"default": "ABC",
+						"description": "%conf.keyAction01.desc%"
+					},
+					"keyAction.02": {
+						"type": "string",
+						"default": "『』",
+						"description": "%conf.keyAction02.desc%"
+					},
+					"keyAction.03": {
+						"type": "string",
+						"default": "『${[HOLD]}』",
+						"description": "%conf.keyAction03.desc%"
+					},
+					"keyAction.04": {
+						"type": "string",
+						"default": "if (${1:condision}) {\n    $0\n}",
+						"description": "%conf.keyAction04.desc%"
+					},
+					"keyAction.05": {
+						"type": "string",
+						"default": "😪💤",
+						"description": "%conf.keyAction05.desc%"
+					},
+					"keyAction.06": {
+						"type": "string",
+						"default": "${[SEQ-NUMBER]}",
+						"description": "%conf.keyAction06.desc%"
+					},
+					"keyAction.07": {
+						"type": "string",
+						"default": "${[DATE:YY-MM-SS]}",
+						"description": "%conf.keyAction07.desc%"
+					},
+					"keyAction.08": {
+						"type": "string",
+						"default": "<div align=\"${1:left}\">${[HOLD]}</div>",
+						"description": "%conf.keyAction08.desc%"
+					},
+					"keyAction.09": {
+						"type": "string",
+						"default": "${[UUID]}",
+						"description": "%conf.keyAction09.desc%"
+					},
+					"keyAction.10": {
+						"type": "string",
+						"default": "${[SEQ-NUMBER:%02d]: }",
+						"description": "%conf.keyAction10.desc%"
+					}
+				}
+			}
+		],
+		"keybindings": [
+            {
+                "command": "insertcustomtext.keyAction01",
+                "key": "ctrl+alt+1",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction02",
+                "key": "ctrl+alt+2",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction03",
+                "key": "ctrl+alt+3",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction04",
+                "key": "ctrl+alt+4",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction05",
+                "key": "ctrl+alt+5",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction06",
+                "key": "ctrl+alt+6",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction07",
+                "key": "ctrl+alt+7",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction08",
+                "key": "ctrl+alt+8",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction09",
+                "key": "ctrl+alt+9",
+				"when": "editorTextFocus"
+            },
+			{
+                "command": "insertcustomtext.keyAction10",
+                "key": "ctrl+alt+0",
+				"when": "editorTextFocus"
+            }
 		]
 	},
 	"scripts": {
