@@ -1,4 +1,10 @@
+// ============================================================
+// Copyright (c) 2021 Tatsuya Nakamori. All rights reserved.
+// See LICENSE in the project root for license information.
+// ============================================================
+
 import * as vscode from 'vscode'
+
 
 const i18nFiles: { [key: string]: string; } = {
     "en": "./../package.nls.json",
