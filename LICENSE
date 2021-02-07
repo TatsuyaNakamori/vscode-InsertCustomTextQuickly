@@ -1,18 +1,18 @@
-Text written using the extension [MIT License]
+Text or code written using this extension [MIT License]
 - Text written using the extension is available for commercial use, and the copyright of the text belongs to the user.
 
-Handling the source code of extensions [GNU GPL v3].
-- When handling the source code of the extension, please follow [GNU GPL v3].
+When dealing with the source code for this extension [GNU GPL v3].
+- If you work with the source code of this extension, please follow the [GNU GPL v3].
 - For example
   "Copy the source code (incorporate it into your own program)."
   "Use dynamic linking."
 
 
-エクステンションを利用して書かれたテキスト... [MIT License]
-- エクステンションを使って書かれた文章(コード)は商用利用が可能で、その文章の著作権は利用者に帰属します。
+このエクステンションを利用して書かれたテキストやコード... [MIT License]
+- このエクステンションを使って書かれた文章(コード)は商用利用が可能で、その文章の著作権は利用者に帰属します。
 
-エクステンションのソースコードの取り扱い... [GNU GPL v3]
-- エクステンションのソースコードを扱う場合は、[GNU GPL v3]に従ってください。
+このエクステンションのソースコードを取り扱う場合... [GNU GPL v3]
+- このエクステンションのソースコードを扱う場合は、[GNU GPL v3]に従ってください。
 - 例えば
   "ソースコードをコピーする（自分のプログラムに組み込む）"
   "ダイナミックリンクを使う"
@@ -717,3 +717,24 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+
+
+
+====================================================================================
+The following is the license for the code used internally (including modifications)
+====================================================================================
+
+[https://github.com/googlearchive/chrome-platform-analytics/blob/master/src/internal/identifier.js]
+// Copyright 2013 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
