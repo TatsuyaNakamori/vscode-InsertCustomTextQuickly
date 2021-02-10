@@ -18,14 +18,14 @@ export function localize(i18nKey: string) {
 }
 
 function getData() {
+    // Get locale ("en", "ja", etc..)
     const locale = vscode.env.language;
-    console.log("vscode.env.language= " + locale);
 
-    let i18nJSON = require(i18nFiles[locale]);
-    console.log("i18nJSON is:");
-    console.log(i18nJSON);
-
+    // Load [package.nls[.xx].json] file
+    if (locale in i18nFiles) {
+        var i18nJSON = require(i18nFiles[locale]);
+    } else {
+        var i18nJSON = require(i18nFiles["en"]);
+    }
     return i18nJSON
 }
-
-
