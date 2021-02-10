@@ -102,17 +102,17 @@
                 "properties": {
                     "text.01": {
                         "type": "string",
-                        "default": "ABC",
+                        "default": "\"Hello!\",『おやすみ』😪💤, 'Wake up!'",
                         "description": "%conf.keyAction01.desc%"
                     },
                     "text.02": {
                         "type": "string",
-                        "default": "『』",
+                        "default": "Backslash:\\b,\\nNewLine,\\nTAB\\tTAB",
                         "description": "%conf.keyAction02.desc%"
                     },
                     "text.03": {
                         "type": "string",
-                        "default": "『${[HOLD]}』",
+                        "default": "<div>${[HOLD]}</div>",
                         "description": "%conf.keyAction03.desc%"
                     },
                     "text.04": {
@@ -122,32 +122,32 @@
                     },
                     "text.05": {
                         "type": "string",
-                        "default": "😪💤",
+                        "default": "<div align=\"${1:left}\">${[HOLD]}</div>",
                         "description": "%conf.keyAction05.desc%"
                     },
                     "text.06": {
                         "type": "string",
-                        "default": "${[SEQ-NUMBER]}",
+                        "default": "${UUID}",
                         "description": "%conf.keyAction06.desc%"
                     },
                     "text.07": {
                         "type": "string",
-                        "default": "${[DATE:YY-MM-SS]}",
+                        "default": "[en] ${[DATE]:en}, [ja] ${[DATE]YYYY年 MMMM D日 (dd), A h:mm:ja}",
                         "description": "%conf.keyAction07.desc%"
                     },
                     "text.08": {
                         "type": "string",
-                        "default": "<div align=\"${1:left}\">${[HOLD]}</div>",
+                        "default": "${[SEQ]%02d:1:2}",
                         "description": "%conf.keyAction08.desc%"
                     },
                     "text.09": {
                         "type": "string",
-                        "default": "${[UUID]}",
+                        "default": "${[SEQ]%c:65:1}",
                         "description": "%conf.keyAction09.desc%"
                     },
                     "text.10": {
                         "type": "string",
-                        "default": "${[SEQ-NUMBER:%02d]: }",
+                        "default": "${[SEQ]%d:x:x}",
                         "description": "%conf.keyAction10.desc%"
                     }
                 }
@@ -269,16 +269,21 @@
         "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
-        "@types/vscode": "^1.53.0",
         "@types/glob": "^7.1.3",
         "@types/mocha": "^8.0.4",
         "@types/node": "^12.11.7",
-        "eslint": "^7.15.0",
+        "@types/voca": "^1.4.0",
+        "@types/vscode": "^1.53.0",
         "@typescript-eslint/eslint-plugin": "^4.9.0",
         "@typescript-eslint/parser": "^4.9.0",
+        "eslint": "^7.15.0",
         "glob": "^7.1.6",
         "mocha": "^8.1.3",
         "typescript": "^4.1.2",
         "vscode-test": "^1.4.1"
+    },
+    "dependencies": {
+        "dayjs": "^1.10.4",
+        "voca": "^1.4.0"
     }
 }
