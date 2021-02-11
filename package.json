@@ -2,7 +2,7 @@
     "name": "insertcustomtext",
     "displayName": "Insert Custom Text Quickly",
     "description": "Quickly insert custom text",
-    "icon": "./resources/icon/extension_main.png",
+    "icon": "resources/icon/extension_main.png",
     "version": "0.0.1",
     "publisher": "TatsuyaNakamori",
     "engines": {
@@ -102,53 +102,43 @@
                 "properties": {
                     "text.01": {
                         "type": "string",
-                        "default": "\"Hello!\",『おやすみ』😪💤, 'Wake up!'",
-                        "description": "%conf.keyAction01.desc%"
+                        "default": "\"Hello!\",『おやすみ』😪💤, 'Wake up!'"
                     },
                     "text.02": {
                         "type": "string",
-                        "default": "Backslash:\\b,\\nNewLine,\\nTAB\\tTAB",
-                        "description": "%conf.keyAction02.desc%"
+                        "default": "Backslash:\\b,\\nNewLine,\\nTAB\\tTAB"
                     },
                     "text.03": {
                         "type": "string",
-                        "default": "<div>${[HOLD]}</div>",
-                        "description": "%conf.keyAction03.desc%"
+                        "default": "if (${1:condision}) {\n    $0\n}"
                     },
                     "text.04": {
                         "type": "string",
-                        "default": "if (${1:condision}) {\n    $0\n}",
-                        "description": "%conf.keyAction04.desc%"
+                        "default": "${UUID}"
                     },
                     "text.05": {
                         "type": "string",
-                        "default": "<div align=\"${1:left}\">${[HOLD]}</div>",
-                        "description": "%conf.keyAction05.desc%"
+                        "default": "<div>${[HOLD]}</div>"
                     },
                     "text.06": {
                         "type": "string",
-                        "default": "${UUID}",
-                        "description": "%conf.keyAction06.desc%"
+                        "default": "<div align=\"${1:left}\">${[HOLD]}</div>"
                     },
                     "text.07": {
                         "type": "string",
-                        "default": "[en] ${[DATE]:en}, [ja] ${[DATE]YYYY年 MMMM D日 (dd), A h:mm:ja}",
-                        "description": "%conf.keyAction07.desc%"
+                        "default": "[default] ${[DATE]}\\n[ja-format] ${[DATE]YYYY年MMMMD日(dd), A h:mm:ja}"
                     },
                     "text.08": {
                         "type": "string",
-                        "default": "${[SEQ]%02d:1:2}",
-                        "description": "%conf.keyAction08.desc%"
+                        "default": "${[SEQ]%d:1:1}"
                     },
                     "text.09": {
                         "type": "string",
-                        "default": "${[SEQ]%c:65:1}",
-                        "description": "%conf.keyAction09.desc%"
+                        "default": "${[SEQ]%c:65:1}"
                     },
                     "text.10": {
                         "type": "string",
-                        "default": "${[SEQ]%d:x:x}",
-                        "description": "%conf.keyAction10.desc%"
+                        "default": "${[SEQ]%d:x:x}"
                     }
                 }
             }
