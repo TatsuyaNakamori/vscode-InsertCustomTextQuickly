@@ -32,7 +32,7 @@ Because Japanese law prohibits money transfers between individuals, the transact
 1. Open `Settings(Ctrl+,)` and select the "`Insert Custom Text Quickly`" item.
 1. Enter the text you want to insert into the `Text01` to `Text10` fields.<br>
   <img src="resources/doc/vscode_prev01.gif" width=700px>
-1. Right-click in the editor and select the "`Insert Text 01`"~"`Insert Text 10`" menu item.<br>(By default, the shortcuts [`Ctrl+Alt+1`]~[`Ctrl+Alt+0`] are set, so you can also access them from the shortcuts.)<br>
+1. Right-click in the editor and select the "`Insert Text 01`"～"`Insert Text 10`" menu item.<br>(By default, the shortcuts [`Ctrl+Alt+1`]～[`Ctrl+Alt+0`] are set, so you can also access them from the shortcuts.)<br>
   <img src="resources/doc/vscode_prev02.gif" width=700px>
 <br><br>
 
