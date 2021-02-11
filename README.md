@@ -64,7 +64,9 @@ Because Japanese law prohibits money transfers between individuals, the transact
   |\r|Carriage Return|
   |\n|Line Feed|
   |\b (\\\\)|Backslash|
-  <br><br>
+  <br>
+<br>
+
 
 ## About the ${[DATE]} keyword
 * **${[DATE]}** keyword can be used to insert information about the current date.
@@ -146,8 +148,8 @@ Because Japanese law prohibits money transfers between individuals, the transact
     |75|K||88|X||107|k||120|x|
     |76|L||89|Y||108|l||121|y|
     |77|M||90|Z||109|m||122|z|
-    <br><br>
-
+    <br>
+<br>
 
 ## Known Issues / Future Updates
 1. it is difficult to know what kind of text to insert when showing the command of this extension in the context menu or command palette. <br>This is due to a limitation of the Visual Studio Code API that prevents you from changing the menu label. <br>We are looking into a mechanism to make it easier to know what kind of text you are trying to insert. <br>
