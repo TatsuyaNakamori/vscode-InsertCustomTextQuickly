@@ -167,21 +167,3 @@ function generateDate(format?:string, locale?:string): string {
         return dayjs().locale(locale).format(format);
     }
 }
-
-
-// =======================================
-// * Define the process to be executed when onDidChangeConfiguration is executed.
-// * Config が変更された時の処理の定義
-// export function onDidChangeConfiguration(context: vscode.ExtensionContext, confID: string) {
-//     const changeConfigEvent = function (e: vscode.ConfigurationChangeEvent) {
-//         if (e.affectsConfiguration(confID)) {
-//             let insertText = vscode.workspace.getConfiguration().get(confID);
-//             vscode.window.showInformationMessage("insertText: [" + confID + "] = " + insertText);
-
-//             console.log("===changeConfigEvent===\n" + confID);
-//         }
-//     }
-
-//     const onDidChangeConfig = vscode.workspace.onDidChangeConfiguration(changeConfigEvent)
-//     context.subscriptions.push(onDidChangeConfig);
-// }
