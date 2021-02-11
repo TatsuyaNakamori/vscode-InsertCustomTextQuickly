@@ -2,10 +2,7 @@
 
 Documentation for each language
 * [:jp: 日本語版](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/blob/master/README.jp.md)
-<!-- * [:fr: Version française](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/blob/master/README.fr.md)
-* [:de: Deutsche Version](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/blob/master/README.de.md)
-* [:cn: 简体中文版](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/blob/master/README.cn.md)
- -->
+
 
 ## Overview.
 
