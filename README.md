@@ -119,9 +119,9 @@ Because Japanese law prohibits money transfers between individuals, the transact
     |%02d| If "02" is specified between "%" and "d", it will be converted to two-digit decimal notation (01, 02, ...). |%o
     |%o|converts to octal notation|
     |%x|converts to hexadecimal (the letter "abcdef" will be lowercased)|
-    |%X|converts to hexadecimal (character "ABCDEF" will be uppercase)|%f|converts to floating point (decimal)
-    |%f|display floating point (real number)|%.2f|"abcdef" will be in lower case)
-    |%.2f|Justify the decimal point to two digits by specifying ".2" between "%" and "f".
+    |%X|converts to hexadecimal (character "ABCDEF" will be uppercase)|
+    |%f|display floating point (real number)|
+    |%.2f|Justify the decimal point to two digits by specifying ".2" between "%" and "f".|
     |%3.2f|"3.2" between "%" and "f" will align the integer part to 3 digits and the decimal part to 2 digits|
     |%e|Print real numbers in exponential format|
     |%c|converts to ASCII characters of the specified number [ [Details](#Correspondence-between-numbers-and-letters-in-"`%c`"-format-(${[SEQ]})) ]|
