@@ -45,10 +45,26 @@ const DATE_LOCALE = [
 ]
 
 
-export async function execInsertText(confID:string) {
-    // Get ConfiguredString
-    let confStr: string | undefined = vscode.workspace.getConfiguration().get(confID);
-    if (!confStr) { return }
+export async function execInsertText() {
+    // Get the configuration text and ask the user which text to insert.
+    let items: vscode.QuickPickItem[] = [];
+    for (let i = 0; i < 10; i++) {
+        let textnum = voca.sprintf("%02d", i+1);
+        var confStr: string | undefined = vscode.workspace.getConfiguration().get(`text.${textnum}`);
+        if (!confStr) { continue }
+
+        let item = {
+            label: `Insert text${textnum}: `,
+            description: confStr
+        }
+        items.push(item);
+    }
+    const result = await vscode.window.showQuickPick(items);
+    confStr = result?.description
+    if (!confStr) {
+        vscode.window.showErrorMessage(i18n.localize("insertaction.quickpick.error"))
+        return
+    }
 
     // Init SEQ values
     const seqReg = /\$\{\[SEQ](.*?):(.*?):(.*?)}/;

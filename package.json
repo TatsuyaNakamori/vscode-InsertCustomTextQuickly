@@ -3,7 +3,7 @@
     "displayName": "Insert Custom Text Quickly",
     "description": "Quickly insert custom text",
     "icon": "resources/icon/extension_main.png",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "publisher": "TatsuyaNakamori",
     "engines": {
         "vscode": "^1.53.0"
@@ -12,7 +12,6 @@
         "Other"
     ],
     "license": "MIT",
-    "preview": true,
     "keywords": [
         "shortcuts",
         "string",
@@ -36,62 +35,8 @@
         "commands": [
             {
                 "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction01",
-                "title": "%keyAction01.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction02",
-                "title": "%keyAction02.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction03",
-                "title": "%keyAction03.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction04",
-                "title": "%keyAction04.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction05",
-                "title": "%keyAction05.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction06",
-                "title": "%keyAction06.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction07",
-                "title": "%keyAction07.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction08",
-                "title": "%keyAction08.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction09",
-                "title": "%keyAction09.title%",
-                "when": "editorTextFocus"
-            },
-            {
-                "category": "InsertCustomTextQuickly",
-                "command": "insertcustomtext.keyAction10",
-                "title": "%keyAction10.title%",
+                "command": "insertcustomtext.inserttext",
+                "title": "%inserttext.title%",
                 "when": "editorTextFocus"
             }
         ],
@@ -144,53 +89,8 @@
         ],
         "keybindings": [
             {
-                "command": "insertcustomtext.keyAction01",
-                "key": "ctrl+alt+1",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction02",
-                "key": "ctrl+alt+2",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction03",
-                "key": "ctrl+alt+3",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction04",
-                "key": "ctrl+alt+4",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction05",
-                "key": "ctrl+alt+5",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction06",
-                "key": "ctrl+alt+6",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction07",
-                "key": "ctrl+alt+7",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction08",
-                "key": "ctrl+alt+8",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction09",
-                "key": "ctrl+alt+9",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "insertcustomtext.keyAction10",
-                "key": "ctrl+alt+0",
+                "command": "insertcustomtext.inserttext",
+                "key": "ctrl+alt+i",
                 "when": "editorTextFocus"
             }
         ],
@@ -198,52 +98,7 @@
             "editor/context": [
                 {
                     "group": "1_modification",
-                    "command": "insertcustomtext.keyAction01",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction02",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction03",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction04",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction05",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction06",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction07",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction08",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction09",
-                    "when": "editorTextFocus"
-                },
-                {
-                    "group": "1_modification",
-                    "command": "insertcustomtext.keyAction10",
+                    "command": "insertcustomtext.inserttext",
                     "when": "editorTextFocus"
                 }
             ]

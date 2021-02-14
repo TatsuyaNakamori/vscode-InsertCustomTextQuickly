@@ -1,27 +1,9 @@
 {
-	"keyAction01.title": "文字の挿入 01",
-	"keyAction02.title": "文字の挿入 02",
-	"keyAction03.title": "文字の挿入 03",
-	"keyAction04.title": "文字の挿入 04",
-	"keyAction05.title": "文字の挿入 05",
-	"keyAction06.title": "文字の挿入 06",
-	"keyAction07.title": "文字の挿入 07",
-	"keyAction08.title": "文字の挿入 08",
-	"keyAction09.title": "文字の挿入 09",
-	"keyAction10.title": "文字の挿入 10",
+    "inserttext.title": "カスタム文字の挿入",
 
-	"conf.keyAction01.desc": "2バイト文字(日本語など)や絵文字を入力できます",
-	"conf.keyAction02.desc": "各エスケープ文字列に対応しています。[\"\\b\": バックスラッシュ], [\"\\n\": 改行], [\"\\t\": Tab]",
-	"conf.keyAction03.desc": "${[HOLD]} キーワードを使うと、選択中の文字を挿入することができます。",
-	"conf.keyAction04.desc": "Snippetsの書式を使うことができます。(https://code.visualstudio.com/docs/editor/userdefinedsnippets)",
-	"conf.keyAction05.desc": "${[HOLD]}キーワードとSnippetsの書式を組み合わせることができます。",
-	"conf.keyAction06.desc": "${UUID}キーワードは、UUIDバージョン4を生成します。",
-	"conf.keyAction07.desc": "${[DATE]}キーワードを使うと、日付を挿入できます。\"[DATE]\"の後でフォーマットやロケート(地域)を設定することができます。",
-	"conf.keyAction08.desc": "${[SEQ]}キーワードを使うと、連番を挿入できます。\"[SEQ]\"の後で、\"フォーマット:初期値:ステップ\"を設定します。",
-	"conf.keyAction09.desc": "${[SEQ]}キーワードで\"%c\"フォーマットを使うと、アルファベットを順番に挿入することができます。",
-	"conf.keyAction10.desc": "${[SEQ]}のオプションで、初期値とステップに\"x\"を指定すると、入力ダイアログが表示され、実行するときに初期値とステップの値を指定することができます。",
+    "insertaction.quickpick.error": "選択項目の情報が正しく取得できませんでした",
 
-	"seq.input.prompt": "シーケンスのstartとstepの値を入力してください。 \"start:step\"",
-	"seq.input.canceled": "入力がキャンセルされました。",
-	"seq.input.formatError": "入力フォーマットにエラーがあります。(\"start:step\")"
+    "seq.input.prompt": "シーケンスのstartとstepの値を入力してください。 \"start:step\"",
+    "seq.input.canceled": "入力がキャンセルされました。",
+    "seq.input.formatError": "入力フォーマットにエラーがあります。(\"start:step\")"
 }
