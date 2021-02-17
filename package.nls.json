@@ -1,6 +1,10 @@
 {
     "inserttext.title": "Insert Custom Text",
 
+    "inserttext.conf.text": "Enter the string to be inserted. For more information [click here](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/blob/master/README.md)",
+    "inserttext.conf.resently": "These are the strings that have been inserted recently. The higher the item is listed, the higher it will be displayed in QuickPick. You can delete items from this list (they will no longer be displayed at the top of the QuickPick), but do not change the text. To change the text, go to \"CustomText\".",
+
+    "insertaction.getconf.error": "The \"CustomText\" information could not be retrieved correctly.",
     "insertaction.quickpick.error": "The information of the selected item could not be obtained correctly.",
 
     "seq.input.prompt": "Enter the values for the start and step of the sequence. \"start:step\"",

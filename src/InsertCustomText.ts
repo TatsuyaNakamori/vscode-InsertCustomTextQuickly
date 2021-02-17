@@ -47,20 +47,42 @@ const DATE_LOCALE = [
 
 export async function execInsertText() {
     // Get the configuration text and ask the user which text to insert.
+    const confStrList: string[] | undefined = vscode.workspace.getConfiguration().get("insertText.customText");
+    const confRecentList: string[] | undefined = vscode.workspace.getConfiguration().get("insertText.recently");
+    if (!confStrList) {
+        vscode.window.showErrorMessage(i18n.localize("insertaction.getconf.error"))
+        return
+    }
+
+    let itemOrder: string[] = []
+    // Insert the most recent item first.
+    if (confRecentList) {
+        for (let i = 0; i < confRecentList.length; i++) {
+            if (confStrList.includes(confRecentList[i])) {
+                itemOrder.push(confRecentList[i])
+            }
+        }
+    }
+    // Then insert the rest of the items
+    for (let i = 0; i < confStrList.length; i++) {
+        if (!itemOrder.includes(confStrList[i])) {
+            itemOrder.push(confStrList[i])
+        }
+    }
+
     let items: vscode.QuickPickItem[] = [];
-    for (let i = 0; i < 10; i++) {
-        let textnum = voca.sprintf("%02d", i+1);
-        var confStr: string | undefined = vscode.workspace.getConfiguration().get(`text.${textnum}`);
-        if (!confStr) { continue }
+    for (let i = 0; i < itemOrder.length; i++) {
+        let num = voca.sprintf("%d", i+1);
 
         let item = {
-            label: `Insert text${textnum}: `,
-            description: confStr
+            label: `Insert text${num}: `,
+            description: itemOrder[i]
         }
         items.push(item);
     }
+
     const result = await vscode.window.showQuickPick(items);
-    confStr = result?.description
+    let confStr: string | undefined = result?.description
     if (!confStr) {
         vscode.window.showErrorMessage(i18n.localize("insertaction.quickpick.error"))
         return
@@ -71,6 +93,7 @@ export async function execInsertText() {
     const seqMatch = seqReg.exec(confStr);
     if (!seqMatch) {
         _replace(confStr);
+        _updateConfig(confStr, confRecentList)
         return
     }
     let format = seqMatch[1];
@@ -101,8 +124,11 @@ export async function execInsertText() {
         step = startStep[1];
     }
 
-    confStr = confStr.replace(seqReg, `\${[SEQ]${format}:${start}:${step}}`);
-    _replace(confStr)
+    const _confStr = confStr.replace(seqReg, `\${[SEQ]${format}:${start}:${step}}`);
+    _replace(_confStr)
+
+
+    _updateConfig(confStr, confRecentList)
 }
 
 function _replace(confStr:string) {
@@ -118,7 +144,7 @@ function _replace(confStr:string) {
         let replaceStr = confStr;
 
         // Convert escape strings
-        replaceStr = convertEscapeStrings(replaceStr);
+        replaceStr = _convertEscapeStrings(replaceStr);
 
         // ${[DATE]} keyword conversion process
         // ${[DATE]} ${[DATE]DD/MM/YYYY} ${[DATE]LLLL:jp}
@@ -128,7 +154,7 @@ function _replace(confStr:string) {
         while (dateMatch) {
             let format = dateMatch[1];
             let locale = dateMatch[3];
-            const dateStr:string = generateDate(format, locale);
+            const dateStr:string = _generateDate(format, locale);
             replaceStr = replaceStr.replace(dateReg, dateStr);
 
             dateMatch = dateReg.exec(replaceStr);
@@ -158,7 +184,7 @@ function _replace(confStr:string) {
     }
 }
 
-function convertEscapeStrings(str:string) {
+function _convertEscapeStrings(str:string) {
     str = str.replace(/\\\\/g, "\\");
     str = str.replace(/\\n/g, "\n");
     str = str.replace(/\\r/g, "\r");
@@ -167,7 +193,7 @@ function convertEscapeStrings(str:string) {
     return str
 }
 
-function generateDate(format?:string, locale?:string): string {
+function _generateDate(format?:string, locale?:string): string {
     // Setup locale
     if (!locale) {
         locale = vscode.env.language.toLowerCase();
@@ -182,4 +208,17 @@ function generateDate(format?:string, locale?:string): string {
     } else {
         return dayjs().locale(locale).format(format);
     }
+}
+
+function _updateConfig(confStr: string, confRecentList: string[] | undefined) {
+    if (!confRecentList) {
+        confRecentList = [confStr];
+    } else {
+        var index = confRecentList.indexOf(confStr);
+        if (index != -1) {
+            confRecentList.splice(index, 1);
+        }
+        confRecentList.unshift(confStr);
+    }
+    vscode.workspace.getConfiguration().update("insertText.recently", confRecentList, true);
 }

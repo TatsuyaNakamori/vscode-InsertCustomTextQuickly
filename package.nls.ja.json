@@ -1,7 +1,12 @@
 {
     "inserttext.title": "カスタム文字の挿入",
 
-    "insertaction.quickpick.error": "選択項目の情報が正しく取得できませんでした",
+    "inserttext.conf.text": "挿入する文字列を入力してください。詳細は[こちら](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/blob/master/README.jp.md)",
+    "inserttext.conf.resently": "最近挿入された文字列です。上に表示されているものほど、QuickPickでの表示が上位になります。※このリストのアイテムの削除は可能ですが(QuickPickで上位に表示されなくなる)、文字の変更は行わないでください。文字の変更は、\"CustomText\"で行います。",
+
+    "insertaction.getconf.error": "\"CustomText\"の情報が正しく取得できませんでした。",
+    "insertaction.quickpick.error": "選択項目の情報が正しく取得できませんでした。",
+
 
     "seq.input.prompt": "シーケンスのstartとstepの値を入力してください。 \"start:step\"",
     "seq.input.canceled": "入力がキャンセルされました。",

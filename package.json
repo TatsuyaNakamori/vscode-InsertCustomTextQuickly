@@ -3,7 +3,7 @@
     "displayName": "Insert Custom Text Quickly",
     "description": "Quickly insert custom text",
     "icon": "resources/icon/extension_main.png",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publisher": "TatsuyaNakamori",
     "engines": {
         "vscode": "^1.53.0"
@@ -13,7 +13,6 @@
     ],
     "license": "MIT",
     "keywords": [
-        "shortcuts",
         "string",
         "text",
         "insert",
@@ -28,7 +27,7 @@
         "url": "https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/issues"
     },
     "activationEvents": [
-        "*"
+        "onCommand:insertcustomtext.inserttext"
     ],
     "main": "./out/extension.js",
     "contributes": {
@@ -42,47 +41,36 @@
         ],
         "configuration": [
             {
-                "title": "Insert Custom Text",
+                "title": "InsertCustomText",
                 "properties": {
-                    "text.01": {
-                        "type": "string",
-                        "default": "\"Hello!\",『おやすみ』😪💤, 'Wake up!'"
+                    "insertText.customText": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "markdownDescription": "%inserttext.conf.text%",
+                        "items": {
+                            "type": "string"
+                        },
+                        "default": [
+                            "\"Hello!\",『おやすみ』😪💤, 'Wake up!'",
+                            "Backslash:\\b,\\nNewLine,\\nTAB\\tTAB",
+                            "if (${1:condision}) {\\n    $0\\n}",
+                            "${UUID}",
+                            "<div>${[HOLD]}</div>",
+                            "<div align=\"${1:left}\">${[HOLD]}</div>",
+                            "[default] ${[DATE]}\\n[ja-format] ${[DATE]YYYY年MMMMD日(dd), A h:mm:ja}",
+                            "${[SEQ]%d:1:1}",
+                            "${[SEQ]%c:65:1}",
+                            "${[SEQ]%d:x:x}"
+                        ]
                     },
-                    "text.02": {
-                        "type": "string",
-                        "default": "Backslash:\\b,\\nNewLine,\\nTAB\\tTAB"
-                    },
-                    "text.03": {
-                        "type": "string",
-                        "default": "if (${1:condision}) {\n    $0\n}"
-                    },
-                    "text.04": {
-                        "type": "string",
-                        "default": "${UUID}"
-                    },
-                    "text.05": {
-                        "type": "string",
-                        "default": "<div>${[HOLD]}</div>"
-                    },
-                    "text.06": {
-                        "type": "string",
-                        "default": "<div align=\"${1:left}\">${[HOLD]}</div>"
-                    },
-                    "text.07": {
-                        "type": "string",
-                        "default": "[default] ${[DATE]}\\n[ja-format] ${[DATE]YYYY年MMMMD日(dd), A h:mm:ja}"
-                    },
-                    "text.08": {
-                        "type": "string",
-                        "default": "${[SEQ]%d:1:1}"
-                    },
-                    "text.09": {
-                        "type": "string",
-                        "default": "${[SEQ]%c:65:1}"
-                    },
-                    "text.10": {
-                        "type": "string",
-                        "default": "${[SEQ]%d:x:x}"
+                    "insertText.recently": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "markdownDescription": "%inserttext.conf.resently%",
+                        "items": {
+                            "type": "string"
+                        }
                     }
                 }
             }

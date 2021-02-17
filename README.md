@@ -6,7 +6,7 @@ Documentation for each language
 \* If the table appears collapsed, please see the readme on GitHub [[GitHub Readme](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly)]
 
 
-## Overview.
+## Overview
 
 * **Insert user-defined text.**
   * Inserting 2-byte characters (Japanese, emoji, etc.).
@@ -16,15 +16,13 @@ Documentation for each language
   * Insert date and time using the "`${[DATE]}`" keyword.
   * Inserting sequential numbers of numbers or characters using the "`${[SEQ]}`" keyword.
 
-## New feature (0.0.2 => 1.0.0)
+## New feature (1.0.0 => 2.0.0)
 
-* The information about the characters to be inserted is now easier to understand. <br>
-  ![insert_text_pick.png](resources/doc/insert_text_pick.png)
+* The settings for characters to be inserted are now in list format, and there is no longer a limit to the number of items.<br>
+  <img src="resources/doc/config.png" width=700px>
 
-* The context menu is now one of "Insert Custom Text". <br>
-  ![new_context_menu.png](resources/doc/new_context_menu.png)
-
-* The shortcut key is now "Ctrl+Alt+I".
+* Previously inserted text is now displayed at the top of the QuickPick list.<br>
+  ![quickpicker.png](resources/doc/quickpicker.png)
 
 
 ## License
@@ -35,17 +33,17 @@ MIT License
 
 ## Donation
 
-Because Japanese law prohibits money transfers between individuals, the transaction is handled under the category of "purchase". Therefore, please be aware that you may not be able to receive tax benefits in your country.
+* [![GitHub Sponsor](https://github.com/sponsors/TatsuyaNakamori/button)](https://github.com/sponsors/TatsuyaNakamori)
 
-[![paypal](https://www.paypalobjects.com/en_US/GB/i/btn/btn_subscribeCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=92TF7YW4SUBHS)
+  or
 
-<iframe src="https://github.com/sponsors/TatsuyaNakamori/button" title="Sponsor TatsuyaNakamori" height="35" width="116" style="border: 0;"></iframe>
+* [![paypal](https://www.paypalobjects.com/en_US/GB/i/btn/btn_subscribeCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=92TF7YW4SUBHS)
 
 ## How to use
 
-1. Open `Settings(Ctrl+,)` and select the "`Insert Custom Text Quickly`" item.
-1. Enter the text you want to insert into the `Text01` to `Text10` fields.<br>
-  <img src="resources/doc/vscode_prev01.gif" width=700px>
+1. Open `Settings(Ctrl+,)` and select the "`InsertCustomText`" item.
+1. Modify text or add items in the `CustomText` section.<br>
+  <img src="resources/doc/conf_settings.png">
 1. Right-click in the editor and select "`Insert Custom Text`". <br>(Or use the shortcut [`Ctrl+Alt+I`].)
 1. Select the text item you want to insert from QuickPick. <br>
   <img src="resources/doc/vscode_prev03.gif" width=700px>
@@ -55,7 +53,7 @@ Because Japanese law prohibits money transfers between individuals, the transact
 
 | Settings                                       | Result                                    | Description                                                                           |
 |------------------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------------|
-| "Hello!",『おやすみ』😪💤, 'Wake up!'          | "Hello!",『おやすみ』😪💤, 'Wake up!'     | Allows you to enter 2-byte characters (e.g. Japanese) and emoji.                      |
+| "Hello!",『おやすみ』😪💤, 'Wake up!'        | "Hello!",『おやすみ』😪💤, 'Wake up!'    | Allows you to enter 2-byte characters (e.g. Japanese) and emoji.                      |
 |Backslash:`\b`,`\n`NewLine,`\n`TAB`\t`TAB       |Backslash:\\,<br>NewLine,<br>TAB&emsp;TAB  |Each escape string is supported. [`\b`(`\\`): Backslash], [`\t`: Tab], [`\r`: Carriage Return], [`\n`: Line Feed].　[[Details](#escape-character)]|
 |if (`${1:condision}`) {`\n`&nbsp;&nbsp;&nbsp;&nbsp;`$0\n`}|if (condision) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>}|You can use the Snippets format. ([VSCode Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets))|
 | `${UUID}`                                      | 6ca25d87-2b09-4190-9454-f2ad52b9bb5f      | The `${UUID}` keyword generates a UUID version 4. (part of VSCode's Snippets feature) |
@@ -128,17 +126,17 @@ Because Japanese law prohibits money transfers between individuals, the transact
   * Use the "printf" conversion specifier, which is commonly used in programming languages.
 
     | Format<br>(conversion specifier) | Meaning                                                                                                                                   |
-    |------------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------|
-    |                            %d | decimal notation                                                                                                                          |
-    |                          %02d | If "02" is specified between "%" and "d", it will be converted to two-digit decimal notation (01, 02, ...).                               |
-    |                            %o | converts to octal notation                                                                                                                |
-    |                            %x | converts to hexadecimal (the letter "abcdef" will be lowercased)                                                                          |
-    |                            %X | converts to hexadecimal (character "ABCDEF" will be uppercase)                                                                            |
-    |                            %f | display floating point (real number)                                                                                                      |
-    |                          %.2f | Justify the decimal point to two digits by specifying ".2" between "%" and "f".                                                           |
-    |                         %3.2f | "3.2" between "%" and "f" will align the integer part to 3 digits and the decimal part to 2 digits                                        |
-    |                            %e | Print real numbers in exponential format                                                                                                  |
-    |                            %c | converts to ASCII characters of the specified number [[Details](#Correspondence-between-numbers-and-letters-in-"`%c`"-format-(${[SEQ]}))] |
+    |---------------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------|
+    |                            %d    | decimal notation                                                                                                                          |
+    |                          %02d    | If "02" is specified between "%" and "d", it will be converted to two-digit decimal notation (01, 02, ...).                               |
+    |                            %o    | converts to octal notation                                                                                                                |
+    |                            %x    | converts to hexadecimal (the letter "abcdef" will be lowercased)                                                                          |
+    |                            %X    | converts to hexadecimal (character "ABCDEF" will be uppercase)                                                                            |
+    |                            %f    | display floating point (real number)                                                                                                      |
+    |                          %.2f    | Justify the decimal point to two digits by specifying ".2" between "%" and "f".                                                           |
+    |                         %3.2f    | "3.2" between "%" and "f" will align the integer part to 3 digits and the decimal part to 2 digits                                        |
+    |                            %e    | Print real numbers in exponential format                                                                                                  |
+    |                            %c    | converts to ASCII characters of the specified number [[Details](#Correspondence-between-numbers-and-letters-in-"`%c`"-format-(${[SEQ]}))] |
 
 
 ### Correspondence between numbers and letters in "`%c`" format (${[SEQ]})
@@ -172,14 +170,5 @@ Because Japanese law prohibits money transfers between individuals, the transact
 
 ## Release Notes
 
-### 1.0.0
-* The information about the text to be inserted is now easier to understand.
-* The context menu is now one of "Insert Custom Text".
-* The shortcut key is now only "Ctrl+Alt+I".
-
-### 0.0.2
-* Fixed broken display of README.
-
-### 0.0.1
-* New Release
+[See CHANGELOG.md](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/blob/master/CHANGELOG.md)
 

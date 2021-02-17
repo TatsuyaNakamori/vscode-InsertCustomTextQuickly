@@ -12,13 +12,15 @@
   * "`${[SEQ]}`"キーワードを使った、数値や文字の連番の挿入
 
 
-## 新機能 (0.0.2 => 1.0.0)
+## 新機能 (1.0.0 => 2.0.0)
 
-* 挿入する文字の情報が分かりやすくなりました。<br>
-  ![insert_text_pick.png](resources/doc/insert_text_pick.png)
-* コンテキストメニューは、"Insert Custom Text"の1つになりました。<br>
-  ![new_context_menu.png](resources/doc/new_context_menu.png)
-* ショートカットキーは、"Ctrl+Alt+I"になります。
+* 挿入する文字の設定が、リスト形式になり、アイテムの上限がなくなりました。<br>
+
+  <img src="resources/doc/config.png" width=700px>
+
+* 過去に挿入したテキストが、QuickPickのリストの上位に表示されるようになりました。<br>
+
+  ![quickpicker.png](resources/doc/quickpicker.png)
 
 
 ## ライセンス
@@ -28,18 +30,18 @@ MIT License
 
 ## 寄付のお願い
 
-日本の法律では個人間の送金が禁止されているので、「購入」として処理されます。お住いの地域(国)の税制優遇を受けることができない可能性があるので注意してください。
+* [![GitHub Sponsor](https://github.com/sponsors/TatsuyaNakamori/button)](https://github.com/sponsors/TatsuyaNakamori)
 
-[![paypal](https://www.paypalobjects.com/en_US/GB/i/btn/btn_subscribeCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=92TF7YW4SUBHS)
+  or
 
-<iframe src="https://github.com/sponsors/TatsuyaNakamori/button" title="Sponsor TatsuyaNakamori" height="35" width="116" style="border: 0;"></iframe>
+* [![paypal](https://www.paypalobjects.com/en_US/GB/i/btn/btn_subscribeCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=92TF7YW4SUBHS)
 
 
 ## 使用方法
 
-1. `Settings(Ctrl+,)`を開き、"`Insert Custom Text Quickly`"の項目を選択します。
-1. `Text01`～`Text10`の各項目に、挿入したい文字を入力します。<br>
-  <img src="resources/doc/vscode_prev01.gif" width=700px>
+1. `Settings(Ctrl+,)`を開き、"`Insert Custom Text`"の項目を選択します。
+1. `CustomText`の項目で、テキストを修正したり、アイテムを追加します。<br>
+  <img src="resources/doc/conf_settings.png">
 1. エディタで右クリックし、"`Insert Custom Text`"を選択します。<br>(もしくは、ショートカット[`Ctrl+Alt+I`]を使います)
 1. QuickPickから、挿入したいテキストの項目を選択します。<br>
   <img src="resources/doc/vscode_prev03.gif" width=700px>
@@ -48,8 +50,8 @@ MIT License
 ## 設定方法
 
 | Settingsの設定                            | 結果                                      | 説明                                          |
-|------------------------------------------|-------------------------------------------|-----------------------------------------------|
-| "Hello!",『おやすみ』😪💤, 'Wake up!'    | "Hello!",『おやすみ』😪💤, 'Wake up!'     | 2バイト文字(日本語など)や絵文字を入力できます |
+|-------------------------------------------|-------------------------------------------|-----------------------------------------------|
+| "Hello!",『おやすみ』😪💤, 'Wake up!'   | "Hello!",『おやすみ』😪💤, 'Wake up!'    | 2バイト文字(日本語など)や絵文字を入力できます |
 |Backslash:`\b`,`\n`NewLine,`\n`TAB`\t`TAB|Backslash:\\,<br>NewLine,<br>TAB&emsp;TAB|各エスケープ文字列に対応しています<br>[`\b`(`\\`): バックスラッシュ], [`\t`: Tab], [`\r`: 復帰], [`\n`: 改行]<br>[[詳細](#エスケープ文字)]|
 |if (`${1:condision}`) {`\n`&nbsp;&nbsp;&nbsp;&nbsp;`$0\n`}|if (condision) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>}|Snippetsの書式を使うことができます<br>[VSCode Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)|
 |`${UUID}`|6ca25d87-2b09-4190-9454-f2ad52b9bb5f|`${UUID}`キーワードは、UUIDバージョン4を生成します<br>(VSCodeのSnippetsの機能の一部です)|
@@ -164,15 +166,5 @@ MIT License
 
 ## リリースノート
 
-### 1.0.0
-* 挿入する文字の情報が分かりやすくなりました。
-* コンテキストメニューは、"Insert Custom Text"の1つになりました。
-* ショートカットキーが、"Ctrl+Alt+I"のみになりました。
-
-### 0.0.2
-* READMEの表示が崩れていたのを修正しました。
-
-### 0.0.1
-* 新規リリース
-
+[CHANGELOG.md](https://github.com/TatsuyaNakamori/vscode-InsertCustomTextQuickly/blob/master/CHANGELOG.md)
 
